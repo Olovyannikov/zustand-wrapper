@@ -5,7 +5,7 @@ import { Indicator, Text } from '@mantine/core';
 import { useIsLarge } from '@/shared/lib/hooks';
 
 import { useCartModel } from '@/entities/Cart';
-import { useGetUserByIdQuery, useUserModel } from '@/entities/User';
+import { getUserByIdQuery, useUserModel } from '@/entities/User';
 
 import s from './NavItem.module.css';
 
@@ -40,7 +40,7 @@ export const NavItem = ({ item }: NavigationItemProps) => {
 
     const { cartProductsCount } = useCartModel.use();
     const { isAuthorized } = useUserModel.use();
-    const { data } = useGetUserByIdQuery();
+    const { data } = getUserByIdQuery.getState();
 
     const favoritesCount = data?.likes?.length ?? 0;
 

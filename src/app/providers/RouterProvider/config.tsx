@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router';
 
 import { ErrorPageLazy } from '@/pages/ErrorPage';
+import { IndexPageLazy } from '@/pages/IndexPage';
+
+import { productsLoader } from '@/entities/Product';
 
 export const AppRoutes = {
     ERROR: 'error',
@@ -32,11 +35,11 @@ export const routerConfig = createBrowserRouter([
         path: RouterPaths.error,
         element: <ErrorPageLazy />,
     },
-    // {
-    //     path: RouterPaths.index,
-    //     element: <IndexPageLazy />,
-    //     loader: Loaders.index,
-    // },
+    {
+        path: RouterPaths.index,
+        element: <IndexPageLazy />,
+        loader: productsLoader,
+    },
     // {
     //     path: RouterPaths.product,
     //     element: <ProductPageLazy />,

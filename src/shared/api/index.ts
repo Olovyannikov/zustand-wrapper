@@ -10,3 +10,4 @@ export const createCommonRequestFx = createRequestFx({
 });
 
 export * from './types';
+export * from './methods';

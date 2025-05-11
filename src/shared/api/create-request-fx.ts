@@ -1,5 +1,5 @@
 import { type FetchOptions, ofetch } from 'ofetch';
-import { create, type StateCreator } from 'zustand';
+import { createStore, type StateCreator } from 'zustand';
 
 import { STORAGE } from '@/shared/lib/services';
 
@@ -69,7 +69,7 @@ const createRequestInstance =
 export const createRequestFx =
     (params: CreateRequestFxParams) =>
     <P = CreateRequestParams, R = void>(payload: Payload<P>) =>
-        create<RequestState<P, R>>(
+        createStore<RequestState<P, R>>(
             createRequestInstance<P, R>({
                 ...params,
                 payload,

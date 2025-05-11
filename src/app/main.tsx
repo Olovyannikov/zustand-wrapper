@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react';
+import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { useAppStarted } from '@/shared/lib/services';
@@ -12,11 +12,9 @@ import './styles/style.css';
 useAppStarted.setState(true);
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-    <StrictMode>
-        <ThemeProvider>
-            <Suspense fallback={<PageLoader />}>
-                <RouterProvider />
-            </Suspense>
-        </ThemeProvider>
-    </StrictMode>
+    <ThemeProvider>
+        <Suspense fallback={<PageLoader />}>
+            <RouterProvider />
+        </Suspense>
+    </ThemeProvider>
 );

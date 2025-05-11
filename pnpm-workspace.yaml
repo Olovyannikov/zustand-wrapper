@@ -1,3 +1,6 @@
 onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
+    - '@evilmartians/lefthook'
+    - '@swc/core'
+    - ejs
+    - esbuild
+    - unrs-resolver

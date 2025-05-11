@@ -12,4 +12,17 @@ export default defineConfig([
             'fsd/insignificant-slice': 'off',
         },
     },
+    {
+        files: ['src/entities/**'],
+        rules: {
+            'fsd/no-cross-imports': 'off',
+            'fsd/forbidden-imports': 'off',
+        },
+    },
+    {
+        files: ['src/shared/assets**'],
+        rules: {
+            'fsd/no-layer-public-api': 'off',
+        },
+    },
 ]);

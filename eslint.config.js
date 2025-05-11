@@ -231,6 +231,7 @@ export default eslintTypescript.config(
             'express-entry.ts',
             'vite.config.ts',
             'vitest.config.ts',
+            'src/pages/**/*',
             'pages/**/*',
             'src/app/**/*',
         ],

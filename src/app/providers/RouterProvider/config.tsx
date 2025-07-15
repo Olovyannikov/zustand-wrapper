@@ -3,8 +3,6 @@ import { createBrowserRouter } from 'react-router';
 import { ErrorPageLazy } from '@/pages/ErrorPage';
 import { IndexPageLazy } from '@/pages/IndexPage';
 
-import { productsLoader } from '@/entities/Product';
-
 export const AppRoutes = {
     ERROR: 'error',
     INDEX: 'index',
@@ -38,7 +36,6 @@ export const routerConfig = createBrowserRouter([
     {
         path: RouterPaths.index,
         element: <IndexPageLazy />,
-        loader: productsLoader,
     },
     // {
     //     path: RouterPaths.product,

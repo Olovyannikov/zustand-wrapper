@@ -10,6 +10,7 @@ export interface CoffeeApiResponse {
 
 export interface CoffeeApiRequest {
     text?: string;
+    type?: string | null;
 }
 
 export interface OrderItem {

@@ -1,21 +1,7 @@
-import { createRequestFx } from './create-request-fx';
-
-export const createInternalRequestFx = <P = void>(fetcher: (params: P) => { url: string; options?: object }) =>
-    createRequestFx<P>(
-        {
-            baseURL: import.meta.env.INTERNAL_API_URL ?? 'https://api.v2.react-learning.ru',
-            withTokenInHeaders: true,
-        },
-        fetcher
-    );
-
-export const createCommonRequestFx = <P = void>(fetcher: (params: P) => { url: string; options?: object }) =>
-    createRequestFx<P>(
-        {
-            baseURL: import.meta.env.INTERNAL_API_URL ?? 'https://api.v2.react-learning.ru',
-        },
-        fetcher
-    );
+export const BASE_URL = 'https://purpleschool.ru/coffee-api';
+export const API = {
+    ORDER_URL: BASE_URL + '/order',
+};
 
 export * from './types';
 export * from './methods';

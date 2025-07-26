@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Badge, Card, Group, Image, Rating, Text } from '@mantine/core';
+import { Badge, Box, Card, Group, Image, Rating, Stack, Text } from '@mantine/core';
 
 interface CoffeeCardProps {
     name: string;
@@ -25,11 +25,11 @@ export const CoffeeCard = ({ image, name, subTitle, rating, type, actionSlot }: 
             {subTitle}
         </Text>
 
-        <Group justify='space-between' mt='md' mb='xs'>
+        <Stack justify='space-between' mt='md' mb='xs'>
             <Badge>{type}</Badge>
             <Rating value={rating} readOnly fractions={2} />
-        </Group>
+        </Stack>
 
-        {actionSlot}
+        <Box mt='auto'>{actionSlot}</Box>
     </Card>
 );
